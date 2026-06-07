@@ -1,3 +1,20 @@
+public class Usuario implements InterfaceUsuario {
+
+    private Long id;
+    private String nome;
+    private String email;
+
+    @Override
+    public String obterDados() {
+        return nome + " - " + email;
+    }
+
+    @Override
+    public void atualizarDados() {
+        System.out.println("Dados atualizados.");
+    }
+}
+
 public class Usuario {
 
     private Long id;
@@ -60,22 +77,5 @@ public class Usuario {
 
     public String obterDados() {
         return nome + " - " + email;
-    }
-}
-
-public class Usuario implements InterfaceUsuario {
-
-    private Long id;
-    private String nome;
-    private String email;
-
-    @Override
-    public String obterDados() {
-        return nome + " - " + email;
-    }
-
-    @Override
-    public void atualizarDados() {
-        System.out.println("Dados atualizados.");
     }
 }
